@@ -116,6 +116,8 @@ PluginEditor::PluginEditor (PluginProcessor& p)
     MORKnob.setValue(processorRef.params[PluginProcessor::KNOBMOR]->get(), juce::NotificationType::dontSendNotification);
     MORKnob.addListener(this);
     addAndMakeVisible(MORKnob);
+    MORKnob.setColour(juce::Slider::thumbColourId, juce::Colour().fromFloatRGBA(1.0f, 0.486f, 0.129f, 1.0f)); //fixed thumb color orange
+
     
     HIGKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 100, 20);
     HIGKnob.setRange(0.0f, 1.0f);
@@ -210,12 +212,16 @@ PluginEditor::PluginEditor (PluginProcessor& p)
     LOPKnob.setValue(processorRef.params[PluginProcessor::KNOBLOP]->get(), juce::NotificationType::dontSendNotification);
     LOPKnob.addListener(this);
     addAndMakeVisible(LOPKnob);
+    LOPKnob.setColour(juce::Slider::thumbColourId, juce::Colour().fromFloatRGBA(0.466f, 0.313f, 0.505f, 1.0f)); //fixed thumb color purple
+
     
     HIPKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 100, 20);
     HIPKnob.setRange(0.0f, 1.0f);
     HIPKnob.setValue(processorRef.params[PluginProcessor::KNOBHIP]->get(), juce::NotificationType::dontSendNotification);
     HIPKnob.addListener(this);
     addAndMakeVisible(HIPKnob);
+    HIPKnob.setColour(juce::Slider::thumbColourId, juce::Colour().fromFloatRGBA(0.949f, 0.913f, 0.117f, 1.0f)); //fixed thumb color yellow
+
     
     FADKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 100, 20);
     FADKnob.setRange(0.0f, 1.0f);
